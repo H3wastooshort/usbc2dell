@@ -3,10 +3,21 @@
 #include <DS2502.h>
 #include "chg_emu.h"
 
-class dell_chg_emu_c final : public chg_emu_c
+struct dell_chg_id_t
+{
+  const char mfg[4] = {'D', 'E', 'L', 'L'};
+  const char type[4] = {'0', '0', 'A', 'C'};
+  char wattage[3] = {'0', '0', '0'};
+  char voltage[3] = {'0', '0', '0'};
+  char amperage[3] = {'0', '0', '0'};
+  char sn[23] = {'A', 'R', 'L', 'E', 'H', 'Q', '5', '6', 'S', 'C', 'Q', 'K', '2', 'G', 'M', 'H', 'W', '2', 'B', 'L', 'E', 'I', 'D'};
+  uint8_t crc[2] = {0, 0};
+};
+
+class chg_emu_dell_c final : public chg_emu_c
 {
 public:
-  dell_chg_emu_c(uint8_t pin)
+  chg_emu_dell_c(uint8_t pin)
   {
     this->_hub = &OneWireHub(pin);
     this->_dell_CH = &DS2502(0x28, 0x0D, 0x01, 0x08, 0x0B, 0x02, 0x0A); // address does not matter, laptop uses skipRom -> note that therefore only one peripheral device is allowed on the bus
@@ -32,16 +43,6 @@ public:
   }
 
 protected:
-  struct dell_chg_id_t
-  {
-    const char mfg[4] = {'D', 'E', 'L', 'L'};
-    const char type[4] = {'0', '0', 'A', 'C'};
-    char wattage[3] = {'0', '0', '0'};
-    char voltage[3] = {'0', '0', '0'};
-    char amperage[3] = {'0', '0', '0'};
-    char sn[23] = {'A', 'R', 'L', 'E', 'H', 'Q', '5', '6', 'S', 'C', 'Q', 'K', '2', 'G', 'M', 'H', 'W', '2', 'B', 'L', 'E', 'I', 'D'};
-    uint8_t crc[2] = {0, 0};
-  };
 
   const uint8_t DELL_CHG_LEN = sizeof(dell_chg_id_t); // must be 42
 

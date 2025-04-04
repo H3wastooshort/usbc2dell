@@ -17,6 +17,11 @@ void setup()
     bool emu_mode = (digitalRead(PIN_SW_EMU_TYPE_0) << 1) | (digitalRead(PIN_SW_EMU_TYPE_0) << 0);
     bool use_pps = digitalRead(PIN_SW_USE_PPS);
     // TODO: init appropriate emu
+    switch (emu_mode&0b11) {
+        default: {
+            selected_emu = dynamic_cast<chg_emu_c*>(new chg_emu_dell_c(PIN_ID)); //TODO: why does this not work?
+        }
+    }
     selected_emu->setup();
     // TODO: start pd
     Wire.swap();
