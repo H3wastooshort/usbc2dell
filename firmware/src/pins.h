@@ -2,6 +2,8 @@
 
 const uint8_t PIN_ID = PIN_PB4;
 
+const uint8_t PIN_FUSB_INT = PIN_PB2;
+
 const uint8_t PIN_PWR_EN = PIN_PB3;
 
 //LED
