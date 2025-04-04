@@ -8,27 +8,27 @@ class dell_chg_emu_c final : public chg_emu_c
 public:
   dell_chg_emu_c(uint8_t pin)
   {
-    this._hub = &OneWireHub(pin);
-    this._dellCH = &DS2502(0x28, 0x0D, 0x01, 0x08, 0x0B, 0x02, 0x0A); // address does not matter, laptop uses skipRom -> note that therefore only one peripheral device is allowed on the bus
+    this->_hub = &OneWireHub(pin);
+    this->_dell_CH = &DS2502(0x28, 0x0D, 0x01, 0x08, 0x0B, 0x02, 0x0A); // address does not matter, laptop uses skipRom -> note that therefore only one peripheral device is allowed on the bus
   }
 
   void loop()
   {
-    this._hub->poll();
+    this->_hub->poll();
   }
   void set_param(const uint32_t millivolt, const uint32_t milliamp)
   {
     dell_chg_id_t id;
     make_dell_chg_id(id, millivolt, milliamp);
-    this._dellCH->writeMemory(reinterpret_cast<uint8_t *>(&id), 42);
+    this->_dell_CH->writeMemory(reinterpret_cast<uint8_t *>(&id), 42);
   }
   void enable()
   {
-    this._hub->attach(*this._dell_CH);
+    this->_hub->attach(*this->_dell_CH);
   }
   void disable()
   {
-    this._hub->detach(*this._dell_CH);
+    this->_hub->detach(*this->_dell_CH);
   }
 
 protected:
@@ -91,5 +91,5 @@ protected:
 
 private:
   OneWireHub *_hub;
-  DS2502 *_dellCH;
+  DS2502 *_dell_CH;
 };
