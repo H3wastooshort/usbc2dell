@@ -35,7 +35,7 @@ jobs:
   DocSch:
     name: Schematic for documentation
     runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad7_auto
+    container: ghcr.io/inti-cmnb/kicad9_auto
     steps:
       - uses: actions/checkout@v4
 
