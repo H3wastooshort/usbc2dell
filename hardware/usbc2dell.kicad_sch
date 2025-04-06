@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "e67adff1-11e0-4c39-abac-ab102d4ad5db")
 	(paper "A4")
+	(title_block
+		(title "USB Type-C to legacy Charging-Connector Adapter")
+		(date "2025")
+		(rev "v0.1")
+		(company "H3")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x03_Socket"
 			(pin_names
@@ -4173,6 +4179,17 @@
 		)
 		(uuid edc56f52-d2d9-4742-9a04-870f0aa91f54)
 	)
+	(text "caps"
+		(exclude_from_sim no)
+		(at 87.63 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "0713fa81-56be-48a9-9920-171596fd3e72")
+	)
 	(text "Software:\n- Negotiate PD profile up to 20V\n- Emulate DELLCHG EEPROM with values from PD profile\n- Enable power output"
 		(exclude_from_sim no)
 		(at 189.23 87.63 90)
@@ -4183,6 +4200,28 @@
 			(justify left bottom)
 		)
 		(uuid "1836492f-f30a-45f8-89c8-e20d936c152c")
+	)
+	(text "LED"
+		(exclude_from_sim no)
+		(at 87.63 102.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "83d7c0d5-bcd4-4c87-961e-c4322259e3fc")
+	)
+	(text "support / protection"
+		(exclude_from_sim no)
+		(at 189.23 102.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "90c65954-b822-4a7d-9ea5-44c9a6c954c8")
 	)
 	(text "main components"
 		(exclude_from_sim no)
