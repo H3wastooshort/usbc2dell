@@ -7561,7 +7561,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "DELL_Charger"
+		(property "Value" "WJ15EDGRC-3.81-3P"
 			(at 148.59 39.3701 0)
 			(effects
 				(font
@@ -7570,7 +7570,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TerminalBlock_WAGO:TerminalBlock_WAGO_236-103_1x03_P5.00mm_45Degree"
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MC_1,5_3-G-3.81_1x03_P3.81mm_Horizontal"
 			(at 147.32 40.64 0)
 			(effects
 				(font
@@ -7589,6 +7589,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated"
+			(at 147.32 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C8406"
 			(at 147.32 40.64 0)
 			(effects
 				(font
