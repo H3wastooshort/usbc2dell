@@ -7464,7 +7464,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "SW_DIP_x04"
+		(property "Value" "DSWB04LHGET"
 			(at 74.93 119.3799 90)
 			(effects
 				(font
@@ -7493,6 +7493,15 @@
 		)
 		(property "Description" "4x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
 			(at 68.58 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C99418"
+			(at 68.58 118.11 90)
 			(effects
 				(font
 					(size 1.27 1.27)
