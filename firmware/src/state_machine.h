@@ -2,6 +2,7 @@
 #include "chg_emu.h"
 #include "globals.h"
 #include "power.h"
+#include "led.h"
 
 enum negotiantion_state_machine_e
 {
@@ -26,6 +27,7 @@ void run_sm() {
         case NEG_WAIT_FOR_PD_TRANS:
             selected_emu->disable();
             set_power(false);
+            set_led_color(LED_COLOR_NONE);
             negotiantion_state=NEG_WAIT_FOR_PD;
             break;
 
@@ -40,6 +42,7 @@ void run_sm() {
             selected_emu->set_param(PD_UFP.get_voltage() * 50 /*mV*/, PD_UFP.get_current() * 10 /*mA*/);
             selected_emu->enable();
             set_power(true);
+            set_led_color(LED_COLOR_20V);
             negotiantion_state = NEG_GOT_20V;
             break;
         case NEG_GOT_20V: if (!PD_UFP.is_power_ready()) negotiantion_state=NEG_WAIT_FOR_PD_TRANS;
@@ -48,6 +51,7 @@ void run_sm() {
             selected_emu->set_param(PD_UFP.get_voltage() * 20 /*mV*/, PD_UFP.get_current() * 50 /*mA*/);
             selected_emu->enable();
             set_power(true);
+            set_led_color(LED_COLOR_PPS);
             negotiantion_state = NEG_GOT_PPS;
             break;
         case NEG_GOT_PPS: if (!PD_UFP.is_PPS_ready()) negotiantion_state=NEG_WAIT_FOR_PD_TRANS;
