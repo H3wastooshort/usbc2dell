@@ -8,11 +8,15 @@
 
 void setup()
 {
+    set_power(false);
     // TODO: init pins
     pinMode(PIN_SW_EMU_TYPE_0, INPUT_PULLUP);
     pinMode(PIN_SW_EMU_TYPE_1, INPUT_PULLUP);
     pinMode(PIN_SW_USE_PPS, INPUT_PULLUP);
     pinMode(PIN_SW_LED_BRIGHT, INPUT_PULLUP);
+    //init LED
+    for (uint8_t i = 0; i<3; i++) {digitalWrite(PINS_LED[i], LOW); pinMode(PINS_LED[i], OUTPUT);}
+    set_led_color(LED_COLOR_BOOT);
     // TODO: read config DIP
     bool emu_mode = (digitalRead(PIN_SW_EMU_TYPE_0) << 1) | (digitalRead(PIN_SW_EMU_TYPE_0) << 0);
     bool use_pps = digitalRead(PIN_SW_USE_PPS);
