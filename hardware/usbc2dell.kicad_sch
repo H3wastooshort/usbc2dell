@@ -8665,7 +8665,7 @@
 				)
 			)
 		)
-		(property "Value" "MC7805CDTRKG"
+		(property "Value" "L78M05ABDT-TR"
 			(at 99.06 34.29 0)
 			(effects
 				(font
@@ -8684,7 +8684,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121902_onsemi-MC7805CDTRKG_C54285.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2307281528_STMicroelectronics-L78M05ABDT-TR_C58069.pdf"
 			(at 99.06 39.37 0)
 			(effects
 				(font
@@ -8693,7 +8693,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252"
+		(property "Description" ""
 			(at 99.06 38.1 0)
 			(effects
 				(font
@@ -8702,7 +8702,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" " C54285"
+		(property "LCSC" "C58069"
 			(at 99.06 38.1 0)
 			(effects
 				(font
