@@ -1,3 +1,4 @@
+#pragma once
 #include <Arduino.h>
 class chg_emu_c {
 public:

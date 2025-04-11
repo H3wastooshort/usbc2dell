@@ -1,3 +1,4 @@
+#pragma once
 #include <Arduino.h>
 #include <OneWireHub.h>
 #include <DS2502.h>

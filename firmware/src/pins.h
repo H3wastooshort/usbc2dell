@@ -1,3 +1,4 @@
+#pragma once
 #include <Arduino.h>
 
 const uint8_t PIN_ID = PIN_PB4;

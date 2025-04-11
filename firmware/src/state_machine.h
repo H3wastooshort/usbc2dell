@@ -1,3 +1,4 @@
+#pragma once
 #include <PD_UFP.h>
 #include "chg_emu.h"
 #include "globals.h"
@@ -16,7 +17,6 @@ enum negotiantion_state_machine_e
 } negotiantion_state;
 
 // TODO: make class
-chg_emu_c *selected_emu = NULL;
 void run_sm() {
     switch (negotiantion_state) {
         default:

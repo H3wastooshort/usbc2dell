@@ -1,3 +1,4 @@
+#pragma once
 #include "pins.h"
 void set_power(bool state) {
     if (state) pinMode(PIN_PWR_EN, INPUT_PULLUP); //use built-in resistor as current limiting
