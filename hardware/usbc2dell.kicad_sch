@@ -8665,7 +8665,7 @@
 				)
 			)
 		)
-		(property "Value" "L7805"
+		(property "Value" "MC7805CDTRKG"
 			(at 99.06 34.29 0)
 			(effects
 				(font
@@ -8684,7 +8684,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121902_onsemi-MC7805CDTRKG_C54285.pdf"
 			(at 99.06 39.37 0)
 			(effects
 				(font
