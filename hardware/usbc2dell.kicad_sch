@@ -4714,12 +4714,12 @@
 		(uuid "558e321e-2ff5-4f8d-b51d-6045487ef08b")
 	)
 	(no_connect
-		(at 60.96 48.26)
-		(uuid "697f0c50-79ad-4ab9-9d02-ac26439a0be5")
-	)
-	(no_connect
 		(at 149.86 123.19)
 		(uuid "84ed67d1-d843-459e-b8ed-22ec3f6e00ec")
+	)
+	(no_connect
+		(at 60.96 71.12)
+		(uuid "9fb0c20b-50b5-4373-b2d3-fac370733098")
 	)
 	(no_connect
 		(at 60.96 45.72)
@@ -4844,6 +4844,16 @@
 			(type default)
 		)
 		(uuid "4a984ba2-1158-4171-b805-a472977d1c25")
+	)
+	(wire
+		(pts
+			(xy 60.96 55.88) (xy 69.85 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f4b886c-f064-4359-b8ae-145d01cb762b")
 	)
 	(wire
 		(pts
@@ -4987,6 +4997,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 53.34) (xy 72.39 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ca7eb63-b184-4712-97b1-d2971f4ec2dd")
+	)
+	(wire
+		(pts
 			(xy 31.75 119.38) (xy 31.75 124.46)
 		)
 		(stroke
@@ -5087,6 +5107,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 50.8) (xy 69.85 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9718cbd1-7a35-4c97-8e6f-04e824f0eb70")
+	)
+	(wire
+		(pts
 			(xy 114.3 55.88) (xy 121.92 55.88)
 		)
 		(stroke
@@ -5137,16 +5167,6 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 53.34) (xy 69.85 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a7478c39-e148-4749-9979-6c3058a57a9f")
-	)
-	(wire
-		(pts
 			(xy 68.58 125.73) (xy 71.12 125.73)
 		)
 		(stroke
@@ -5184,16 +5204,6 @@
 			(type default)
 		)
 		(uuid "bb9af79d-2dc7-4c51-abec-35d89c93d6bd")
-	)
-	(wire
-		(pts
-			(xy 60.96 55.88) (xy 69.85 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bfd5ad83-1878-4b63-aa3a-b4ec0691ff82")
 	)
 	(wire
 		(pts
@@ -5247,16 +5257,6 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 50.8) (xy 69.85 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0f67ae8-9332-4820-b35c-bbdcd6f71fc4")
-	)
-	(wire
-		(pts
 			(xy 114.3 38.1) (xy 114.3 55.88)
 		)
 		(stroke
@@ -5264,16 +5264,6 @@
 			(type default)
 		)
 		(uuid "d6d97543-bda5-470c-9ca8-7f1fdc51d3a8")
-	)
-	(wire
-		(pts
-			(xy 60.96 71.12) (xy 72.39 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "deb75d33-ab63-40c3-86b5-91a4796b2e9f")
 	)
 	(wire
 		(pts
@@ -5304,6 +5294,16 @@
 			(type default)
 		)
 		(uuid "ea16d784-0a2c-451a-9f24-30837764e4e2")
+	)
+	(wire
+		(pts
+			(xy 60.96 48.26) (xy 69.85 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9639272-a40b-4e9f-984f-ae6edb741bb9")
 	)
 	(wire
 		(pts
@@ -5395,16 +5395,6 @@
 		)
 		(uuid "2246e5d4-5173-4d14-9114-680b9b47f54a")
 	)
-	(label "LED_G"
-		(at 69.85 50.8 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "276a1b62-2c80-4619-ad26-ea4d561d690c")
-	)
 	(label "ID"
 		(at 144.78 118.11 0)
 		(effects
@@ -5415,15 +5405,15 @@
 		)
 		(uuid "3a3e3895-25cb-47a4-919b-3cb24555f233")
 	)
-	(label "ID"
-		(at 72.39 71.12 180)
+	(label "LED_G"
+		(at 69.85 48.26 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "3e796a3c-d506-4490-b439-3a8badb43854")
+		(uuid "3e9379b9-5d04-438a-8cf8-84b7758f251e")
 	)
 	(label "S0"
 		(at 26.67 60.96 0)
@@ -5485,16 +5475,6 @@
 		)
 		(uuid "698dbeed-e610-4036-8f22-54e0e46b0714")
 	)
-	(label "LED_R"
-		(at 69.85 53.34 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "69d02ff8-bd1e-4da1-9dca-79bf713e7800")
-	)
 	(label "S2"
 		(at 26.67 66.04 0)
 		(effects
@@ -5515,6 +5495,16 @@
 		)
 		(uuid "7a47e84e-ec1a-4175-82c6-d8b8bd09173a")
 	)
+	(label "LED_R"
+		(at 69.85 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7cbc0ab7-7fc4-44b3-8bea-ab19c0cd6054")
+	)
 	(label "CC1"
 		(at 181.61 118.11 180)
 		(effects
@@ -5534,16 +5524,6 @@
 			(justify right bottom)
 		)
 		(uuid "96ba63a0-6ffc-4f80-b621-a5d62c0fa1ec")
-	)
-	(label "LED_B"
-		(at 69.85 55.88 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "9a5b32f0-ebb3-4c79-9622-bd90ded9be64")
 	)
 	(label "ID_PIN"
 		(at 139.7 138.43 90)
@@ -5604,6 +5584,26 @@
 			(justify left bottom)
 		)
 		(uuid "d5e5e5f8-be75-4dd2-b10b-df2f9d89619d")
+	)
+	(label "LED_B"
+		(at 69.85 55.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "da984099-d6dd-4412-9656-a4d16e30985f")
+	)
+	(label "ID"
+		(at 72.39 53.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "dc782c47-7f44-4842-907a-a229f83e6313")
 	)
 	(label "PWR_GATE"
 		(at 120.65 48.26 0)
