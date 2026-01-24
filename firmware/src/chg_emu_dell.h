@@ -59,7 +59,7 @@ protected:
 
   static constexpr uint8_t DELL_CHG_LEN = sizeof(dell_chg_id_t); // must be 42
 
-  static void dell_chg_num2str(uint32_t milli_num, char str[3])
+  static void int_to_char(uint32_t milli_num, char str[3])
   {
     for (uint8_t i = 0; i < 3; i++)
     {
@@ -72,7 +72,7 @@ protected:
   /* Taken from https://github.com/orgua/OneWireHub/tree/main/examples/DS2502_DELLCHG */
   // This function assumes that the supplied string is exactly 40 bytes.
   // crc_l and crc_h are the pointers to the lower and higher bytes of the calculated CRC16, respectively.
-  static void dell_chg_crc(const char *string_40byte, uint8_t *crc_l, uint8_t *crc_h)
+  static void calculate_dell_crc(const char *string_40byte, uint8_t *crc_l, uint8_t *crc_h)
   {
     uint32_t crc = 0;
     for (int offset = 0; offset < 40; offset++)
@@ -96,11 +96,11 @@ protected:
     uint32_t decivolt = millivolt / 100;
     uint32_t deciamp = milliamp / 100;
     uint32_t watt = (decivolt * deciamp) / 100;
-    dell_chg_num2str(watt, id.wattage);
-    dell_chg_num2str(decivolt, id.voltage);
-    dell_chg_num2str(deciamp, id.amperage);
+    chg_emu_dell_c::int_to_char(watt, id.wattage);
+    chg_emu_dell_c::int_to_char(decivolt, id.voltage);
+    chg_emu_dell_c::int_to_char(deciamp, id.amperage);
 
-    dell_chg_crc(reinterpret_cast<const char *>(&id), &id.crc[0], &id.crc[1]);
+    chg_emu_dell_c::calculate_dell_crc(reinterpret_cast<const char *>(&id), &id.crc[0], &id.crc[1]);
   }
 
 private:
