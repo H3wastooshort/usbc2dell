@@ -20,8 +20,15 @@ class chg_emu_dell_c final : public chg_emu_c
 public:
   chg_emu_dell_c(uint8_t pin)
   {
-    this->_hub = &OneWireHub(pin);
-    this->_dell_CH = &DS2502(0x28, 0x0D, 0x01, 0x08, 0x0B, 0x02, 0x0A); // address does not matter, laptop uses skipRom -> note that therefore only one peripheral device is allowed on the bus
+    this->_hub = new OneWireHub(pin);
+    this->_dell_CH = new DS2502(0x28, 0x0D, 0x01, 0x08, 0x0B, 0x02, 0x0A); // address does not matter, laptop uses skipRom -> note that therefore only one peripheral device is allowed on the bus
+  }
+
+  ~chg_emu_dell_c()
+  {
+    this->disable();
+    delete this->_dell_CH;
+    delete this->_hub;
   }
 
   void setup() override {
@@ -50,7 +57,7 @@ public:
 
 protected:
 
-  const uint8_t DELL_CHG_LEN = sizeof(dell_chg_id_t); // must be 42
+  static constexpr uint8_t DELL_CHG_LEN = sizeof(dell_chg_id_t); // must be 42
 
   static void dell_chg_num2str(uint32_t milli_num, char str[3])
   {
