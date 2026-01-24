@@ -1,6 +1,8 @@
 #pragma once
 #include <Arduino.h>
 class chg_emu_c {
+protected:
+    ~chg_emu_c() = default;
 public:
     virtual void setup() = 0;
     virtual void loop() = 0;
