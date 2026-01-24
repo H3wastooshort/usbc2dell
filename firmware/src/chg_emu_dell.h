@@ -24,21 +24,26 @@ public:
     this->_dell_CH = &DS2502(0x28, 0x0D, 0x01, 0x08, 0x0B, 0x02, 0x0A); // address does not matter, laptop uses skipRom -> note that therefore only one peripheral device is allowed on the bus
   }
 
-  void loop()
+  void setup() override {
+    //do nothing
+  }
+
+  void loop() override
   {
     this->_hub->poll();
   }
-  void set_param(const uint32_t millivolt, const uint32_t milliamp)
+
+  void set_param(const uint32_t millivolt, const uint32_t milliamp) override
   {
     dell_chg_id_t id;
     make_dell_chg_id(id, millivolt, milliamp);
     this->_dell_CH->writeMemory(reinterpret_cast<uint8_t *>(&id), 42);
   }
-  void enable()
+  void enable() override
   {
     this->_hub->attach(*this->_dell_CH);
   }
-  void disable()
+  void disable() override
   {
     this->_hub->detach(*this->_dell_CH);
   }

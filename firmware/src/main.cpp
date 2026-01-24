@@ -23,7 +23,9 @@ void setup()
     // TODO: init appropriate emu
     switch (emu_mode&0b11) {
         default: {
-            selected_emu = dynamic_cast<chg_emu_c*>(new chg_emu_dell_c(PIN_ID)); //TODO: why does this not work?
+            selected_emu = dynamic_cast<chg_emu_c*>(
+                new chg_emu_dell_c(PIN_ID)
+            );
         }
     }
     selected_emu->setup();

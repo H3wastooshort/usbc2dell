@@ -2,7 +2,6 @@
 #include <Arduino.h>
 class chg_emu_c {
 public:
-    virtual ~chg_emu_c() = default;
     virtual void setup() = 0;
     virtual void loop() = 0;
     virtual void set_param(uint32_t millivolt, uint32_t milliamp) = 0;
