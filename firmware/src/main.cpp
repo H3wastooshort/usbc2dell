@@ -18,15 +18,18 @@ void setup()
     for (uint8_t i = 0; i<3; i++) {digitalWrite(PINS_LED[i], LOW); pinMode(PINS_LED[i], OUTPUT);}
     set_led_color(LED_COLOR_BOOT);
     // TODO: read config DIP
-    bool emu_mode = (digitalRead(PIN_SW_EMU_TYPE_0) << 1) | (digitalRead(PIN_SW_EMU_TYPE_0) << 0);
+    uint8_t emu_mode = ( (digitalRead(PIN_SW_EMU_TYPE_0) << 1) | (digitalRead(PIN_SW_EMU_TYPE_0) << 0) ) & 0b11;
     bool use_pps = digitalRead(PIN_SW_USE_PPS);
     // TODO: init appropriate emu
-    switch (emu_mode&0b11) {
-        default: {
-            selected_emu = dynamic_cast<chg_emu_c*>(
-                new chg_emu_dell_c(PIN_ID)
-            );
-        }
+    switch (emu_mode) {
+
+        case 0b11:
+        default:
+            {
+                selected_emu = dynamic_cast<chg_emu_c*>(
+                    new chg_emu_dell_c(PIN_ID)
+                );
+            } break;
     }
     selected_emu->setup();
     //Wire.swap(0);
