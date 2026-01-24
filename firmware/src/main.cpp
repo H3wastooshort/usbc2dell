@@ -27,9 +27,20 @@ void setup()
         }
     }
     selected_emu->setup();
-    // TODO: start pd
-    Wire.swap();
+    //Wire.swap(0);
+    Wire.usePullups();
+    Wire.setClock(10000);
     Wire.begin();
+    Wire.usePullups();
+
+    Wire.beginTransmission (0x22);
+    if (Wire.endTransmission () != 0) while (1) { //blink if missing fusb
+        set_led_color(LED_COLOR_BOOT);
+        delay(500);
+        set_led_color(LED_COLOR_ERR);
+        delay(500);
+    }
+
     if (use_pps)
         PD_UFP.init_PPS(PIN_FUSB_INT, PPS_V(19.5), PPS_A(5), PD_POWER_OPTION_MAX_20V);
     else
