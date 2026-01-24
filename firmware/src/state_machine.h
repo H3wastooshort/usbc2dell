@@ -5,7 +5,7 @@
 #include "power.h"
 #include "led.h"
 
-enum negotiantion_state_machine_e
+enum negotiantion_states_e
 {
     NEG_INIT = 0,
     NEG_WAIT_FOR_PD_TRANS,
@@ -14,7 +14,7 @@ enum negotiantion_state_machine_e
     NEG_GOT_20V,
     NEG_GOT_PPS_TRANS,
     NEG_GOT_PPS,
-} negotiantion_state;
+} negotiantion_state = NEG_INIT;
 
 // TODO: make class
 void run_sm() {
