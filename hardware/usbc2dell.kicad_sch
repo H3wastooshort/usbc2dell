@@ -4668,6 +4668,24 @@
 		(uuid "1f79a089-6d57-4e57-8feb-68ddecef207b")
 	)
 	(junction
+		(at 73.66 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "230a1515-7b19-485a-845a-1b8fbf84f2a7")
+	)
+	(junction
+		(at 74.93 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2c10febc-2879-481b-9a53-cedcf01092b0")
+	)
+	(junction
+		(at 86.36 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "38b25ab6-1aa9-4af0-bc97-e77cb87adb28")
+	)
+	(junction
 		(at 31.75 124.46)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4709,6 +4727,12 @@
 		(color 0 0 0 0)
 		(uuid "f2cefe7c-5a67-4e76-8324-9478465d676c")
 	)
+	(junction
+		(at 76.2 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fb26aeb5-0a1d-4dd0-9402-ab00b338a831")
+	)
 	(no_connect
 		(at 60.96 73.66)
 		(uuid "558e321e-2ff5-4f8d-b51d-6045487ef08b")
@@ -4734,6 +4758,16 @@
 			(type default)
 		)
 		(uuid "0447a3da-a4c6-46e4-932f-923e54bdeabc")
+	)
+	(wire
+		(pts
+			(xy 73.66 49.53) (xy 73.66 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0da21f90-47d7-4a64-aec0-60bdac9bba8d")
 	)
 	(wire
 		(pts
@@ -4787,6 +4821,16 @@
 	)
 	(wire
 		(pts
+			(xy 76.2 57.15) (xy 76.2 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c86778f-2d5a-4881-839e-b92a8918cf51")
+	)
+	(wire
+		(pts
 			(xy 63.5 125.73) (xy 66.04 125.73)
 		)
 		(stroke
@@ -4824,6 +4868,16 @@
 			(type default)
 		)
 		(uuid "3eed723f-5d32-4da6-9c1e-41535a71e847")
+	)
+	(wire
+		(pts
+			(xy 86.36 53.34) (xy 86.36 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ff683bb-6ec3-4aa4-a991-bec1786fb405")
 	)
 	(wire
 		(pts
@@ -4937,6 +4991,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 49.53) (xy 86.36 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6527f850-03f3-43d0-80fb-be754aaaa1b8")
+	)
+	(wire
+		(pts
 			(xy 74.93 60.96) (xy 74.93 68.58)
 		)
 		(stroke
@@ -4997,7 +5061,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 53.34) (xy 72.39 53.34)
+			(xy 60.96 53.34) (xy 69.85 53.34)
 		)
 		(stroke
 			(width 0)
@@ -5117,6 +5181,16 @@
 	)
 	(wire
 		(pts
+			(xy 78.74 57.15) (xy 76.2 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a00ed41-85a7-4ab4-94f1-079ed87f6d30")
+	)
+	(wire
+		(pts
 			(xy 114.3 55.88) (xy 121.92 55.88)
 		)
 		(stroke
@@ -5167,6 +5241,16 @@
 	)
 	(wire
 		(pts
+			(xy 78.74 53.34) (xy 74.93 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa17b3d2-1b0d-4e56-8f81-435379455d50")
+	)
+	(wire
+		(pts
 			(xy 68.58 125.73) (xy 71.12 125.73)
 		)
 		(stroke
@@ -5174,6 +5258,16 @@
 			(type default)
 		)
 		(uuid "ac500c22-ae4e-493c-8f42-6a28536c2fb6")
+	)
+	(wire
+		(pts
+			(xy 74.93 53.34) (xy 74.93 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac741f25-fc26-4ca9-b448-08271c3349d8")
 	)
 	(wire
 		(pts
@@ -5264,6 +5358,16 @@
 			(type default)
 		)
 		(uuid "d6d97543-bda5-470c-9ca8-7f1fdc51d3a8")
+	)
+	(wire
+		(pts
+			(xy 78.74 49.53) (xy 73.66 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e07bd864-3b89-4d04-a7e7-3a0189127fd6")
 	)
 	(wire
 		(pts
@@ -5596,7 +5700,7 @@
 		(uuid "da984099-d6dd-4412-9656-a4d16e30985f")
 	)
 	(label "ID"
-		(at 72.39 53.34 180)
+		(at 69.85 53.34 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5686,6 +5790,82 @@
 			(project ""
 				(path "/e67adff1-11e0-4c39-abac-ab102d4ad5db"
 					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 82.55 57.15 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "04e7e9bc-55d9-4d0f-b760-78fe6409e87a")
+		(property "Reference" "R8"
+			(at 78.486 55.372 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4k7"
+			(at 82.55 57.15 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 82.55 58.928 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 82.55 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 82.55 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23162"
+			(at 82.55 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "02bfe0f8-af05-4501-8237-78262860cd2c")
+		)
+		(pin "2"
+			(uuid "86b86454-9246-4a11-b027-0dcb3a7edf0a")
+		)
+		(instances
+			(project "usbc2dell"
+				(path "/e67adff1-11e0-4c39-abac-ab102d4ad5db"
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -6213,6 +6393,147 @@
 			(project "usbc2dell.py"
 				(path "/e67adff1-11e0-4c39-abac-ab102d4ad5db"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 86.36 53.34 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2f2f2f61-4ba8-409f-bee8-c0dbc47f9dc8")
+		(property "Reference" "#PWR013"
+			(at 82.55 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 90.424 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 86.36 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e9281a2f-c7b6-4f80-bcc7-f6fc853760b9")
+		)
+		(instances
+			(project "usbc2dell"
+				(path "/e67adff1-11e0-4c39-abac-ab102d4ad5db"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 82.55 53.34 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2f9d4b5e-6e0e-493c-a6e1-37b53885cc86")
+		(property "Reference" "R7"
+			(at 78.486 51.562 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4k7"
+			(at 82.55 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 82.55 55.118 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 82.55 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 82.55 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23162"
+			(at 82.55 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b177ee39-48bd-43b6-bfc6-ec91ef75b5fc")
+		)
+		(pin "2"
+			(uuid "cb727c81-702f-454a-ad59-889a8afe5ecd")
+		)
+		(instances
+			(project "usbc2dell"
+				(path "/e67adff1-11e0-4c39-abac-ab102d4ad5db"
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -6844,6 +7165,82 @@
 			(project "usbc2dell"
 				(path "/e67adff1-11e0-4c39-abac-ab102d4ad5db"
 					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 82.55 49.53 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "608f52e4-7109-43cf-9392-8f795e12fe7c")
+		(property "Reference" "R6"
+			(at 78.486 47.752 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4k7"
+			(at 82.55 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 82.55 51.308 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 82.55 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 82.55 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C23162"
+			(at 82.55 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cd653ebd-4318-44b8-bea5-9114e9f45ff7")
+		)
+		(pin "2"
+			(uuid "598d7112-2019-4210-ba34-ec7ac933569a")
+		)
+		(instances
+			(project "usbc2dell"
+				(path "/e67adff1-11e0-4c39-abac-ab102d4ad5db"
+					(reference "R6")
 					(unit 1)
 				)
 			)
