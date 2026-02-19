@@ -1,10 +1,12 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include "pins.h"
-#include "globals.h"
 #include "chg_emu_dell.h"
 #include "led.h"
-#include "state_machine.h"
+#include "power.h"
+#include "emu_controller.h"
+
+EmuController* ec = NULL;
 
 void setup()
 {
@@ -17,12 +19,15 @@ void setup()
     //init LED
     for (uint8_t i = 0; i<3; i++) {digitalWrite(PINS_LED[i], LOW); pinMode(PINS_LED[i], OUTPUT);}
     set_led_color(LED_COLOR_BOOT);
-    // TODO: read config DIP
+
     uint8_t emu_mode = ( (digitalRead(PIN_SW_EMU_TYPE_0) << 1) | (digitalRead(PIN_SW_EMU_TYPE_0) << 0) ) & 0b11;
     bool use_pps = digitalRead(PIN_SW_USE_PPS);
-    // TODO: init appropriate emu
+    
+    
+    //init appropriate emu
+    chg_emu_c* selected_emu = NULL;
     switch (emu_mode) {
-
+        //TODO: HP emulator
         case 0b11:
         default:
             {
@@ -31,30 +36,13 @@ void setup()
                 );
             } break;
     }
-    selected_emu->setup();
-    //Wire.swap(0);
-    Wire.usePullups();
-    Wire.setClock(10000);
-    Wire.begin();
-    Wire.usePullups();
 
-    Wire.beginTransmission (0x22);
-    if (Wire.endTransmission () != 0) while (1) { //blink if missing fusb
-        set_led_color(LED_COLOR_BOOT);
-        delay(500);
-        set_led_color(LED_COLOR_ERR);
-        delay(500);
-    }
-
-    if (use_pps)
-        PD_UFP.init_PPS(PIN_FUSB_INT, PPS_V(19.5), PPS_A(5), PD_POWER_OPTION_MAX_20V);
-    else
-        PD_UFP.init(PIN_FUSB_INT, PD_POWER_OPTION_MAX_20V);
+    //Init Emu
+    ec = new EmuController(&Wire,use_pps,selected_emu);
+    ec->setup();
 }
 
 void loop()
 {
-    PD_UFP.run();
-    run_sm();
-    selected_emu->loop();
+    ec->loop();
 }
