@@ -1,7 +1,7 @@
 #pragma once
 #include <OneWireHub.h>
 #include <DS2502.h>
-#include "chg_emu.h"
+#include "chg_emu.hpp"
 
 struct dell_chg_id_t
 {

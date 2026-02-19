@@ -1,5 +1,5 @@
-#include "power.h"
-#include "pins.h"
+#include "power.hpp"
+#include "pins.hpp"
 
 void set_power(bool state) {
     if (state) pinMode(PIN_PWR_EN, INPUT_PULLUP); //use built-in resistor as current limiting

@@ -1,6 +1,6 @@
 #pragma once
 #include <PD_UFP.h>
-#include "chg_emu.h"
+#include "chg_emu.hpp"
 
 enum negotiantion_states_e
 {
@@ -19,7 +19,7 @@ class EmuController {
     EmuController& operator=(const EmuController&) = delete;
     
     const bool use_pps;
-    
+
     chg_emu_c *emulator;
     PD_UFP_c pd;
     TwoWire *i2c;

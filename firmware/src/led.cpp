@@ -1,4 +1,4 @@
-#include "led.h"
+#include "led.hpp"
 #include <Arduino.h>
 
 void set_led_color(const uint8_t color[3]) {

@@ -1,8 +1,8 @@
-#include "emu_controller.h"
+#include "emu_controller.hpp"
 #include <PD_UFP.h>
-#include "chg_emu.h"
-#include "power.h"
-#include "led.h"
+#include "chg_emu.hpp"
+#include "power.hpp"
+#include "led.hpp"
 
 EmuController::EmuController(TwoWire* i2c, const bool use_pps, chg_emu_c *emulator) : i2c(i2c), use_pps(use_pps), emulator(emulator), negotiantion_state(NEG_INIT) {};
 

@@ -1,4 +1,4 @@
-#include "chg_emu_dell.h"
+#include "chg_emu_dell.hpp"
 #include <Arduino.h>
 #include <OneWireHub.h>
 #include <DS2502.h>

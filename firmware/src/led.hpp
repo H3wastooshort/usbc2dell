@@ -1,5 +1,5 @@
 #pragma once
-#include "pins.h"
+#include "pins.hpp"
 
 //colorblind-friendly palette
 constexpr uint8_t LED_COLOR_BOOT[3] = {0xff, 0xff, 0xff};

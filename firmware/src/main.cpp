@@ -1,10 +1,10 @@
 #include <Arduino.h>
 #include <Wire.h>
-#include "pins.h"
-#include "chg_emu_dell.h"
-#include "led.h"
-#include "power.h"
-#include "emu_controller.h"
+#include "pins.hpp"
+#include "chg_emu_dell.hpp"
+#include "led.hpp"
+#include "power.hpp"
+#include "emu_controller.hpp"
 
 EmuController* ec = NULL;
 
