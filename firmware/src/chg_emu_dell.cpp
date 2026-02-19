@@ -2,6 +2,7 @@
 #include <Arduino.h>
 #include <OneWireHub.h>
 #include <DS2502.h>
+#include "debug.hpp"
 
 constexpr uint8_t DELL_CHG_LEN = sizeof(dell_chg_id_t);
 static_assert(DELL_CHG_LEN == 42);
@@ -29,6 +30,7 @@ void chg_emu_dell_c::set_param(const uint32_t millivolt, const uint32_t milliamp
     dell_chg_id_t id;
     make_dell_chg_id(id, millivolt, milliamp);
     this->_dell_CH->writeMemory(reinterpret_cast<uint8_t *>(&id), 42);
+    Logger::log(id);
 }
 void chg_emu_dell_c::enable() {
     this->_hub->attach(*this->_dell_CH);

@@ -26,7 +26,8 @@ class EmuController {
 
     negotiantion_states_e negotiantion_state;
 
-    void run_sm();
+    void sm_run();
+    void sm_change_state(const negotiantion_states_e new_state);
     
     public:
     EmuController(TwoWire* i2c, const bool use_pps, chg_emu_c *emulator);

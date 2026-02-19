@@ -5,6 +5,7 @@
 #include "led.hpp"
 #include "power.hpp"
 #include "emu_controller.hpp"
+#include "debug.hpp"
 
 EmuController* ec = NULL;
 
@@ -20,21 +21,21 @@ void setup()
     for (uint8_t i = 0; i<3; i++) {digitalWrite(PINS_LED[i], LOW); pinMode(PINS_LED[i], OUTPUT);}
     set_led_color(LED_COLOR_BOOT);
 
+    Logger::setup();
+
+    //init appropriate emu
+
     uint8_t emu_mode = ( (digitalRead(PIN_SW_EMU_TYPE_0) << 1) | (digitalRead(PIN_SW_EMU_TYPE_0) << 0) ) & 0b11;
     bool use_pps = digitalRead(PIN_SW_USE_PPS);
     
-    
-    //init appropriate emu
     chg_emu_c* selected_emu = NULL;
     switch (emu_mode) {
+        case 0b01:
         //TODO: HP emulator
         case 0b11:
         default:
-            {
-                selected_emu = dynamic_cast<chg_emu_c*>(
-                    new chg_emu_dell_c(PIN_ID)
-                );
-            } break;
+            selected_emu = new chg_emu_dell_c(PIN_ID);
+            break;
     }
 
     //Init Emu
